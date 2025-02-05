@@ -13,24 +13,24 @@ import { Button } from "./ui/button";
 export const UsernameMenu = () => {
   const { user, logout } = useAuth0();
   return (
-    <DropdownMenu>
+    <DropdownMenu >
       <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2">
         <CircleUserRound className="text-orange-500" />
         {user?.email}
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem>
+        <DropdownMenuItem className="flex items-center font-bold gap-2">
           <Link to="/user-profile" className="font-bold hover:text-orange-500">
             User Profile
           </Link>
         </DropdownMenuItem>
         <Separator>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="flex items-center font-bold gap-2">
             <Button
               onClick={() => logout()}
               className="flex flex-1 font-bold bg-orange-500"
             >
-              {" "}
+              
               Log Out
             </Button>
           </DropdownMenuItem>
